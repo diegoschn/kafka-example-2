@@ -1,0 +1,27 @@
+{
+    "type": "record",
+    "name": "People",
+    "namespace": "com.udemy.kafka",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "cpf",
+            "type": "string"
+        },
+        {
+            "name": "books",
+            "type": {
+                "type": "array",
+                "items": "string"
+            }
+        }
+
+    ]
+}
