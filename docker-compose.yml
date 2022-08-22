@@ -69,6 +69,15 @@ services:
       - kafka1
       - kafka-schema-registry
 
+  kafdrop:
+    image: obsidiandynamics/kafdrop:3.27.0
+    depends_on:
+      - kafka1
+    ports:
+      - 9000:9000
+    environment:
+      KAFKA_BROKERCONNECT: kafka1:29092        
+
   
   # kafka-connect:
   #   image: confluentinc/cp-kafka-connect:7.2.1
